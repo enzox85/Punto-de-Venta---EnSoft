@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8A3B75F8-10C2-468F-8BEB-C42A17B621F7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ABM2</RootNamespace>
+    <AssemblyName>ABM2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.3.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.26.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.26.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.3.8\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=9.0.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.9.0.0\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="ShutterPrism.MVC.FontAwesome, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ShutterPrism.MVC.FontAwsome.1.0.1\lib\ShutterPrism.MVC.FontAwesome.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.8.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZstdSharp, Version=0.8.0.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZstdSharp.Port.0.8.0\lib\net462\ZstdSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frm01_LOGUIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm01_LOGUIN.Designer.cs">
+      <DependentUpon>frm01_LOGUIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm01_menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm01_menu.Designer.cs">
+      <DependentUpon>frm01_menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm10_Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm10_Ventas.Designer.cs">
+      <DependentUpon>frm10_Ventas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm1_articulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm1_articulos.Designer.cs">
+      <DependentUpon>frm1_articulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm2_alta_nuevo_artiuclo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm2_alta_nuevo_artiuclo.Designer.cs">
+      <DependentUpon>frm2_alta_nuevo_artiuclo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm3_modificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm3_modificar.Designer.cs">
+      <DependentUpon>frm3_modificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm5_clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm5_clientes.Designer.cs">
+      <DependentUpon>frm5_clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm6_nuevo_cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm6_nuevo_cliente.Designer.cs">
+      <DependentUpon>frm6_nuevo_cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm7_modificar_cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm7_modificar_cliente.Designer.cs">
+      <DependentUpon>frm7_modificar_cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm8_CuentaCorriente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm8_CuentaCorriente.Designer.cs">
+      <DependentUpon>frm8_CuentaCorriente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm8_CuentaCorrienteDetalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm8_CuentaCorrienteDetalles.Designer.cs">
+      <DependentUpon>frm8_CuentaCorrienteDetalles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm8_CuentaCorrienteMENU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm8_CuentaCorrienteMENU.Designer.cs">
+      <DependentUpon>frm8_CuentaCorrienteMENU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm8_CuentaCorrienteNuevaCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm8_CuentaCorrienteNuevaCuenta.Designer.cs">
+      <DependentUpon>frm8_CuentaCorrienteNuevaCuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm8_vender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm8_vender.Designer.cs">
+      <DependentUpon>frm8_vender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm8_vender2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm8_vender2.Designer.cs">
+      <DependentUpon>frm8_vender2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm8_vender3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm8_vender3.Designer.cs">
+      <DependentUpon>frm8_vender3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm9_empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm9_empleados.Designer.cs">
+      <DependentUpon>frm9_empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm9_modificar_empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm9_modificar_empleado.Designer.cs">
+      <DependentUpon>frm9_modificar_empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm9_nuevo_empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm9_nuevo_empleado.Designer.cs">
+      <DependentUpon>frm9_nuevo_empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm9_Nuevo_PROOV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm9_Nuevo_PROOV.Designer.cs">
+      <DependentUpon>frm9_Nuevo_PROOV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm9_PROOVScs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm9_PROOVScs.Designer.cs">
+      <DependentUpon>frm9_PROOVScs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm9_PROOV_modificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm9_PROOV_modificar.Designer.cs">
+      <DependentUpon>frm9_PROOV_modificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm01_LOGUIN.resx">
+      <DependentUpon>frm01_LOGUIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm01_menu.resx">
+      <DependentUpon>frm01_menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm10_Ventas.resx">
+      <DependentUpon>frm10_Ventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm1_articulos.resx">
+      <DependentUpon>frm1_articulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm2_alta_nuevo_artiuclo.resx">
+      <DependentUpon>frm2_alta_nuevo_artiuclo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm3_modificar.resx">
+      <DependentUpon>frm3_modificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm5_clientes.resx">
+      <DependentUpon>frm5_clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm6_nuevo_cliente.resx">
+      <DependentUpon>frm6_nuevo_cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm7_modificar_cliente.resx">
+      <DependentUpon>frm7_modificar_cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm8_CuentaCorriente.resx">
+      <DependentUpon>frm8_CuentaCorriente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm8_CuentaCorrienteDetalles.resx">
+      <DependentUpon>frm8_CuentaCorrienteDetalles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm8_CuentaCorrienteMENU.resx">
+      <DependentUpon>frm8_CuentaCorrienteMENU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm8_CuentaCorrienteNuevaCuenta.resx">
+      <DependentUpon>frm8_CuentaCorrienteNuevaCuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm8_vender.resx">
+      <DependentUpon>frm8_vender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm8_vender2.resx">
+      <DependentUpon>frm8_vender2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm8_vender3.resx">
+      <DependentUpon>frm8_vender3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm9_empleados.resx">
+      <DependentUpon>frm9_empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm9_modificar_empleado.resx">
+      <DependentUpon>frm9_modificar_empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm9_nuevo_empleado.resx">
+      <DependentUpon>frm9_nuevo_empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm9_Nuevo_PROOV.resx">
+      <DependentUpon>frm9_Nuevo_PROOV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm9_PROOVScs.resx">
+      <DependentUpon>frm9_PROOVScs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm9_PROOV_modificar.resx">
+      <DependentUpon>frm9_PROOV_modificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Content\fonts\fontawesome-webfont.eot" />
+    <None Include="Content\fonts\fontawesome-webfont.ttf" />
+    <None Include="Content\fonts\fontawesome-webfont.woff" />
+    <None Include="Content\fonts\fontawesome-webfont.woff2" />
+    <None Include="Content\fonts\FontAwesome.otf" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Social Media free icons designed by Freepik.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconos gratuitos de Carretilla diseñados por Smashicons.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Social Media free icons designed by Freepik.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2024-08-29 201503.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-save-icon-button-symbol-thumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4305589.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\43055891.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Go-back_36760.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconos gratuitos de Botón Agregar diseñados por Uniconlabs.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2024-08-29 210431.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update_ Label Reading and FODMAPs.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update_ Label Reading and FODMAPs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update_ Label Reading and FODMAPs1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8254206.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconos gratuitos de Botón Agregar diseñados por Uniconlabs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2024-08-29 2104311.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconos gratuitos de Carretilla diseñados por Smashicons.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1738697.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Social Media free icons designed by Freepik1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_User-80_icon-icons.com_57329.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5408490.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevoempleado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modificar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modificar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-computer-software-computer-icons-management-others-computer-area-management.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2024-09-01 040521.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4305535.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lock-password-icon-Graphics-18249988-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lock-password-icon-Graphics-18249988-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-proveedor-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2103848.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modificar proovedor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AgregarPROOVEDOR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2083080.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\css\font-awesome.css" />
+    <Content Include="Content\css\font-awesome.min.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <None Include="Resources\pngwing.com.png" />
+    <None Include="Resources\png-transparent-sales-computer-icons-business-purchasing-marketing-sales-company-text-people-thumbnail.png" />
+    <None Include="Resources\12354461.png" />
+    <None Include="Resources\1235446.png" />
+    <None Include="Resources\png-transparent-bank-account-wire-transfer-cheque-money-transfer-bank-leaf-text-logo-thumbnail.png" />
+    <None Include="Resources\stock_4379653.png" />
+    <None Include="Resources\cash-register-icon-style-vector.png" />
+    <None Include="Resources\12149261.png" />
+    <None Include="Resources\1214926.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
