@@ -16,5 +16,10 @@ namespace ABM2
         {
             InitializeComponent();
         }
+
+        private void frm8_CuentaCorrienteNuevaCuenta_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

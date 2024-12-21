@@ -8,21 +8,49 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Drawing.Printing;
+using System.IO;
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
+using iText.Layout.Properties;
+using iText.Kernel.Pdf.Canvas.Draw; // Esta directiva importa SolidLine
 
 
 namespace ABM2
 {
     public partial class frm8_vender : Form
     {
-        public MySqlConnection con = new MySqlConnection("server = localhost; database= comercio2; user=root; password= ");
+        public MySqlConnection con = new MySqlConnection("server = localhost; database= comercio2; user=root; password='' ");
         public DataTable artab = new DataTable();
         public DataTable pedtab = new DataTable();
+        public DataTable datosclientes = new DataTable();
+        private PrintDocument printDocument;
+        private PrintPreviewDialog printPreviewDialog;
+        private string nomcomercio = "";
+        private string direccion = "";
+        private string telefono = "";
+        private string cuit = "";
+        private string numFactura = "";
+        private decimal pagosdebito = 1.0m;
+        private decimal pagoscredito = 1.0m;
+
+        public static frm8_vender Instancia { get; private set; }
 
         public frm8_vender()
         {
             InitializeComponent();
+            printDocument = new PrintDocument();
+            printDocument.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
+            printPreviewDialog = new PrintPreviewDialog();
+            printPreviewDialog.WindowState = FormWindowState.Maximized;
+            Instancia = this; // Guardar referencia estática de esta instancia clientes consum final
         }
 
+        private void frm8_vender_Load(object sender, EventArgs e)
+        {
+            CargarDatosComercio();
+        } 
         private void frm8_vender_Activated(object sender, EventArgs e)
         {
 
@@ -42,19 +70,20 @@ namespace ABM2
                 column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 column.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             }
-         
-          
             // Artículos
             artab.Clear();
             con.Open();
             MySqlDataAdapter artadapt = new MySqlDataAdapter("SELECT idproducto, codigo, stock,stockmin, articulos, precio_venta FROM productos", con);
             artadapt.Fill(artab);
             dgvarts.DataSource = artab;
+            dgvarts.ClearSelection();
+
             //---------------------------------------------------------------------------------------------------------------------------------
+
             dgvarts.EnableHeadersVisualStyles = false;
             DataGridViewCellStyle encabezado = new DataGridViewCellStyle();
             encabezado.BackColor = Color.LightGoldenrodYellow;
-            encabezado.ForeColor = Color.DarkOliveGreen;
+            encabezado.ForeColor = Color.Black;
             encabezado.Font = new Font("Bradley Hand ITC", 15, FontStyle.Bold);
             encabezado.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvarts.ColumnHeadersDefaultCellStyle = encabezado;
@@ -66,10 +95,8 @@ namespace ABM2
             dgvarts.Columns["stock"].HeaderText = "Stock";
             dgvarts.Columns["articulos"].HeaderText = "Artículos";
             dgvarts.Columns["precio_venta"].HeaderText = "P.Venta";
+            dgvarts.Columns["stock"].Width = 70;
             dgvarts.Columns["articulos"].Width = 250;
-            dgvarts.Columns["stock"].Width = 80;
-            /*dgvarts.Columns["precio_costo"].Width = 100;
-            dgvarts.Columns["iva"].Width = 50;*/
             dgvarts.Columns["precio_venta"].Width = 100;
             // Centrar contenido
             foreach (DataGridViewColumn column in dgvarts.Columns)
@@ -77,15 +104,31 @@ namespace ABM2
                 column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 column.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             }
+             foreach (DataGridViewColumn column in dgvpedido.Columns)
+              {
+                  column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                  column.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+              }
 
+             dgvpedido.EnableHeadersVisualStyles = false;
+             DataGridViewCellStyle encabezado2 = new DataGridViewCellStyle();
+              encabezado2.BackColor = Color.LightGoldenrodYellow;
+              encabezado2.ForeColor = Color.Black;
+              encabezado2.Font = new Font("Bradley Hand ITC", 15, FontStyle.Bold);
+
+              dgvpedido.ColumnHeadersDefaultCellStyle = encabezado2;
+                  
             dgvpedido.DataSource = pedtab;
             dgvpedido.RowHeadersVisible = false;
             dgvpedido.Columns["idproducto"].Visible = false;
+            dgvpedido.Columns["Cantidad"].Width = 90;
+            dgvpedido.Columns["Articulo"].Width = 250;
+            dgvpedido.Columns["Importe"].Width = 100;
+
 
             con.Close();
 
         }
-
         private void busartxt_TextChanged(object sender, EventArgs e)
         {
             artab.DefaultView.RowFilter = "articulos LIKE '%" + busartxt.Text + "%' ";//&& codigo LIKE '" + busartxt.Text + "'
@@ -93,29 +136,23 @@ namespace ABM2
         }
 
         //-----------------------------------------------------------------
-        private int nfc()                //func nueva factura
+        private string nfc() // Función nueva factura
         {
-            int nuevafac = 1;
+            // Genera el número de factura usando la fecha y hora actual
+            string nuevafac = DateTime.Now.ToString("yyyyMMddHHmmss"); // AñoMesDíaHoraMinutoSegundo
 
-            using (var cmd = new MySqlCommand("SELECT COALESCE(MAX(num_fact), 0) + 1 FROM ventas", con))
-            {
-                con.Open();
-                nuevafac = Convert.ToInt32(cmd.ExecuteScalar());
-                con.Close();
-            }
             return nuevafac;
         }
         //--------------------------------------------------------------------------
-
 
         decimal subtotal = 0;
         decimal debacum = 0;
         decimal credacum = 0;
 
         private void imprimir_Click(object sender, EventArgs e)
-        {
-            int nfac = nfc();
-            nfactxt.Text = "N° " + nfac.ToString();
+        {       //Cargar productos
+            numFactura = nfc(); // Ahora es un string
+            nfactxt.Text = "N° " + numFactura;
 
             if (dgvarts.SelectedRows.Count != 0 && busartxt.Text == "")
             {
@@ -148,8 +185,8 @@ namespace ABM2
             }
 
             string articulo = dgvarts.CurrentRow.Cells["articulos"].Value.ToString();
-            string mosdebpor = "10";
-            string moscredpor = "20";
+            string mosdebpor = pagosdebito.ToString() ;
+            string moscredpor = pagoscredito.ToString();
 
 
             // Verificar si el precio de venta es DBNull.Value
@@ -162,8 +199,8 @@ namespace ABM2
             decimal pventa = Convert.ToDecimal(dgvarts.CurrentRow.Cells["precio_venta"].Value);
             decimal importe = cantidad * pventa;
             imptxt.Text = importe.ToString("C");
-            decimal deb = (importe * 10 / 100) + importe;
-            decimal cred = (importe * 20 / 100) + importe;
+            decimal deb = importe + (importe * pagosdebito / 100);
+            decimal cred = importe + (importe * pagoscredito / 100);
 
             subtotal += importe;
             debacum += deb;
@@ -178,11 +215,10 @@ namespace ABM2
             efectivotxt.Text = subtotal.ToString("C");
             debitotxt.Text = debacum.ToString("C");  deb_porcent.Text = mosdebpor;
             creditotxt.Text = credacum.ToString("C"); cred_porcent.Text = moscredpor;
-
+            
             busartxt.Focus(); busartxt.Clear(); cantxt.Clear(); preciounitxt.Clear(); imptxt.Clear();
 
         }
-
 
         private void vendido_Click(object sender, EventArgs e)
         {
@@ -192,89 +228,118 @@ namespace ABM2
 
                 if (result == DialogResult.Yes)
                 {
-                    int numfac = nfc();
+                    // Validar método de pago
+                    if (!rb_efectivo.Checked && !rb_deb.Checked && !rb_cred.Checked)
+                    {
+                        MessageBox.Show("Por favor, selecciona un método de pago antes de continuar.", "Método de Pago Requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    string numfac = nfc(); // Genera el número de factura
                     string efectivo = null;
                     string debito = null;
                     string credito = null;
-                    if (rb_efectivo.Checked)
 
+                    decimal totalVenta = 0; // Variable para almacenar el total ajustado de la venta
+
+                    // Validar método de pago y configurar valores
+                    if (rb_efectivo.Checked)
                     {
                         efectivo = "PAGADO";
                         MessageBox.Show("Pago en EFECTIVO confirmado.");
                     }
                     else if (rb_deb.Checked)
                     {
-
                         debito = "PAGADO";
-                        MessageBox.Show("Pago con DEBITO confirmado.");
+                        MessageBox.Show("Pago con DÉBITO confirmado.");
                     }
                     else if (rb_cred.Checked)
                     {
                         credito = "PAGADO";
-                        MessageBox.Show("Pago en CREDITO confirmado.");
+                        MessageBox.Show("Pago con CRÉDITO confirmado.");
                     }
 
-
+                    // Procesar los productos de la venta
                     foreach (DataRow row in pedtab.Rows)
                     {
+                        int idproducto = Convert.ToInt32(row["idproducto"]);
                         int cantidad = Convert.ToInt32(row["Cantidad"]);
                         string articulo = row["Articulo"].ToString();
                         decimal importe = Convert.ToDecimal(row["Importe"]);
-                        int idproducto = Convert.ToInt32(row["idproducto"]); // Función para obtener el id del producto
+                        decimal importeAjustado = importe; // Por defecto, sin ajuste
+                        if (rb_deb.Checked)
+                        {
+                            importeAjustado = importe * (1 + pagosdebito / 100); // Ajuste según porcentaje de débito
+                        }
+                        else if (rb_cred.Checked)
+                        {
+                            importeAjustado = importe * (1 + pagoscredito / 100); // Ajuste según porcentaje de crédito
+                        }
 
+                        totalVenta += importeAjustado;
+                        string metodoPago = rb_efectivo.Checked ? "efectivo" :
+                        rb_deb.Checked ? "débito" : "crédito";
                         con.Open();
                         MySqlCommand venta = new MySqlCommand(
-                            "INSERT INTO ventas (idart, fecha, cantidad, articulos, total, num_fact, efectivo, debito, credito) " +
-                            "VALUES (@idart, @fecha, @cantidad, @articulos, @total, @num_fact, @efectivo, @debito, @credito)", con);
+                            "INSERT INTO ventas (idart, fecha, cantidad, articulos, total, num_fact, met_pago) " +
+                            "VALUES (@idart, @fecha, @cantidad, @articulos, @total, @num_fact, @met_pago)", con);
 
-                        // Insertar los valores en la base de datos
-                        venta.Parameters.AddWithValue("@fecha", DateTime.Now); // Fecha y hora actuales
-                        venta.Parameters.AddWithValue("@idart", idproducto);
-                        venta.Parameters.AddWithValue("@cantidad", cantidad);
-                        venta.Parameters.AddWithValue("@articulos", articulo);
-                        venta.Parameters.AddWithValue("@total", importe);
                         venta.Parameters.AddWithValue("@num_fact", numfac);
-
-                        // Insertar solo el método de pago seleccionado, los demás serán null
-                        venta.Parameters.AddWithValue("@efectivo", efectivo);
-                        venta.Parameters.AddWithValue("@debito", debito);
-                        venta.Parameters.AddWithValue("@credito", credito);
+                        venta.Parameters.AddWithValue("@articulos", articulo);
+                        venta.Parameters.AddWithValue("@cantidad", cantidad);
+                        venta.Parameters.AddWithValue("@idart", idproducto);
+                        venta.Parameters.AddWithValue("@total", importeAjustado); // Guardar el precio ajustado
+                        venta.Parameters.AddWithValue("@met_pago", metodoPago);
+                        venta.Parameters.AddWithValue("@fecha", DateTime.Now);
+                        
 
                         venta.ExecuteNonQuery();
                         con.Close();
 
-
-                        artab.Clear();
+                        // Actualizar el stock
                         con.Open();
-                        MySqlDataAdapter artadapt = 
-                            new MySqlDataAdapter("SELECT idproducto, codigo, stock,stockmin, articulos, precio_venta FROM productos", con);
-                        artadapt.Fill(artab);
-                        dgvarts.DataSource = artab;
-                        // Actualizar stock
                         MySqlCommand actualizarStock = new MySqlCommand("UPDATE productos SET stock = stock - @cantidad WHERE idproducto = @idproducto", con);
                         actualizarStock.Parameters.AddWithValue("@cantidad", cantidad);
                         actualizarStock.Parameters.AddWithValue("@idproducto", idproducto);
-
                         actualizarStock.ExecuteNonQuery();
                         con.Close();
-
-                    
                     }
-                    pedtab.Clear(); efectivotxt.Clear(); debitotxt.Clear(); creditotxt.Clear(); subtotaltxt.Clear(); imptxt.Clear();//subtotaltxt.Text = subtotal.ToString("C"); 
-                    rb_efectivo.Checked = false;
-                    rb_cred.Checked = false;
-                    rb_deb.Checked = false;
-                    
+
+                    // Preguntar si desea guardar la factura
+                    DialogResult facturaResult = MessageBox.Show(
+                        "¿Desea guardar o imprimir la factura?",
+                        "Opciones de Factura",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question);
+
+                    if (facturaResult == DialogResult.Yes)
+                    {
+                        guardarpdf_Click(sender, e);
+                    }
+
+                    // Limpiar los campos
+                    pedtab.Clear(); efectivotxt.Text = "";debitotxt.Clear();creditotxt.Clear();subtotaltxt.Clear();imptxt.Clear();subtotal = 0;
+                    debacum = 0;credacum = 0;rb_efectivo.Checked = false;rb_deb.Checked = false;rb_cred.Checked = false;apenomtxt.Text = "";
+                    dnitxt.Text = "";teltxt.Text = "";directxt.Text = ""; datosclientes.Clear();
+                    nfactxt.Text = "";
+
+                    // Actualizar tabla de productos
+                    artab.Clear();
+                    con.Open();
+                    MySqlDataAdapter artadapt = new MySqlDataAdapter("SELECT idproducto, codigo, stock, stockmin, articulos, precio_venta FROM productos", con);
+                    artadapt.Fill(artab);
+                    dgvarts.DataSource = artab;
+                    con.Close();
+
+                    // Mostrar el total ajustado de la venta
+                    MessageBox.Show($"Venta confirmada. Total: {totalVenta:C2}", "Venta Confirmada", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-
-
             }
-            else
-            {
-                MessageBox.Show("Elija un articulo para vender");
-            }
-
         }
+
+
+
+
 
         private void cancelar_Click(object sender, EventArgs e)
         {//ELIMINA TODA LA VENTA. CANCELA
@@ -305,9 +370,8 @@ namespace ABM2
                     }
 
                     pedtab.Clear(); efectivotxt.Text = ""; debitotxt.Clear(); creditotxt.Clear(); subtotaltxt.Clear(); imptxt.Clear();
-                    subtotal = 0; debacum = 0; credacum = 0;
-
-                    //subtotaltxt.Text = subtotal.ToString("C");     
+                    subtotal = 0; debacum = 0; credacum = 0; apenomtxt.Text = ""; dnitxt.Text = "";  teltxt.Text = ""; // SUPR PARA ELIMINAR
+                    directxt.Text = ""; datosclientes.Clear();
                 }
                 busartxt.Focus();
 
@@ -319,8 +383,8 @@ namespace ABM2
             }
 
         }
-        private void dgvpedido_KeyDown(object sender, KeyEventArgs e)
-        {// SUPR o ENTER PARA ELIMINAR
+        private void dgvpedido_KeyDown(object sender, KeyEventArgs e)// SUPR PARA ELIMINAR
+        {
             if (e.KeyCode == Keys.Delete)
             {
                 if (dgvpedido.CurrentRow != null)
@@ -331,7 +395,6 @@ namespace ABM2
                         dgvpedido.Rows.RemoveAt(dgvpedido.CurrentRow.Index);
                     }
                     busartxt.Focus();
-
                     MessageBox.Show("Artículo eliminado de la venta.");
                 }
 
@@ -347,21 +410,8 @@ namespace ABM2
             cantxt.Focus();
             busartxt.Text = dgvarts.CurrentRow.Cells["articulos"].Value.ToString();
             preciounitxt.Text = dgvarts.CurrentRow.Cells["precio_venta"].Value.ToString();
+            cantxt.Text = "1";
 
-            if (dgvarts.CurrentRow.Cells["precio_venta"].Value == DBNull.Value)
-            {
-                MessageBox.Show("El precio de venta no está disponible para el artículo seleccionado.");
-                DialogResult result = MessageBox.Show("¿Está seguro de que desea modificar el artículo de la lista?", "Confirmar", MessageBoxButtons.YesNo);
-                idartxt.Text = dgvarts.CurrentRow.Cells[0].Value.ToString();
-
-                if (result == DialogResult.Yes)
-                {
-
-                    frm3_modificar modificar = new frm3_modificar();
-                    modificar.idtxt2.Text = dgvarts.CurrentRow.Cells[0].Value.ToString();
-                    modificar.Show();
-                }
-            }
 
         }
 
@@ -387,8 +437,8 @@ namespace ABM2
         }
         private void cantxt_TextChanged(object sender, EventArgs e)
         {
-            //decimal precioUnitario = Convert.ToDecimal(preciounitxt.Text);
-            if (decimal.TryParse(preciounitxt.Text, out decimal precioUnitario))//precioUnitario > 0 
+            
+            if (decimal.TryParse(preciounitxt.Text, out decimal precioUnitario))
             {
                 if (decimal.TryParse(cantxt.Text, out decimal cantidad))
                 {
@@ -408,10 +458,10 @@ namespace ABM2
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)// boton de volver 
         {
-            frm01_menu volver = new frm01_menu();
-            this.Close();
+           frm01_menu volver = new frm01_menu();
+           this.Close();
         }
 
         private void idartxt_Click(object sender, EventArgs e)
@@ -421,12 +471,6 @@ namespace ABM2
             modificar.Show();
         }
       
-        private void frm8_vender_Load(object sender, EventArgs e)
-        {
-
-        }
-
-     
         private void cantxt_KeyDown_1(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -437,16 +481,294 @@ namespace ABM2
             }
             else if (e.KeyCode == Keys.Escape)
             {
-                // dgvarts.Focus();
+               //dgvarts.Focus();
                 busartxt.Focus();
                 busartxt.Clear(); preciounitxt.Clear(); cantxt.Clear(); imptxt.Clear();
             }
         }
 
-     
-    }
+        private void idc3txt_TextChanged(object sender, EventArgs e)
+        {   //Tabla : Datos de clientes, en caso de que la venta requiera de un consumidor final
+            con.Open();
+            string idc = idc3txt.Text;
+            MySqlDataAdapter adap = new MySqlDataAdapter("Select * from clientes where idcliente = @idcliente", con);
+            adap.SelectCommand.Parameters.AddWithValue("@idcliente", idc);
+            adap.Fill(datosclientes);
+            if (datosclientes.Rows.Count > 0)
+            {
+                apenomtxt.Text= Convert.ToString(datosclientes.Rows[0][2]);
+                dnitxt.Text =   Convert.ToString(datosclientes.Rows[0]["DNI"]);
+                teltxt.Text =   Convert.ToString(datosclientes.Rows[0][3]);
+                directxt.Text = Convert.ToString(datosclientes.Rows[0][4]);
+            
+            }
+            else
+            {
+                MessageBox.Show("No se encontró el cliente con el ID especificado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            con.Close();
+        }
 
+        private void nuevclientbut_Click(object sender, EventArgs e)// (+)
+        {
+                // Ocultar el formulario de ventas mientras abres el de clientes
+                this.Hide();
+                frm5_clientes formClientes = new frm5_clientes();
+                formClientes.ShowDialog();
+                this.Show(); // Mostrar de nuevo el formulario al cerrar el de clientes
+         
+
+            
+            
+
+        }
+
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            numFactura = nfc(); // Genera el número de factura
+            nfactxt.Text = "N° " + numFactura.ToString(); // Mostrar el número de factura
+                                                          // Margen de inicio de impresión
+            int startX = 20;
+            int startY = 20;
+            int offsetY = 20;
+
+            // Fuente para la impresión
+            Font fontHeader = new Font("Arial", 14, FontStyle.Bold);
+            Font fontRegular = new Font("Arial", 10);
+            Font fontBold = new Font("Arial", 10, FontStyle.Bold);
+
+            // Dibujar encabezado
+            e.Graphics.DrawString(nomcomercio, fontHeader, Brushes.Black, startX, startY);
+            offsetY += 40;
+            e.Graphics.DrawString($"Dirección: {direccion}", fontRegular, Brushes.Black, startX, startY + offsetY);
+            offsetY += 20;
+            e.Graphics.DrawString($"Teléfono: {telefono}", fontRegular, Brushes.Black, startX, startY + offsetY);
+            offsetY += 20;
+            e.Graphics.DrawString($"CUIT: {cuit}", fontRegular, Brushes.Black, startX, startY + offsetY);
+            offsetY += 20;
+            e.Graphics.DrawString($"Fecha: {DateTime.Now.ToShortDateString()}", fontRegular, Brushes.Black, startX + 300, startY + offsetY);
+            offsetY += 40;
+
+            // Dibujar encabezado de cliente
+            e.Graphics.DrawString($"Cliente: {apenomtxt.Text}", fontRegular, Brushes.Black, startX, startY + offsetY);
+            offsetY += 20;
+            e.Graphics.DrawString($"DNI: {dnitxt.Text}", fontRegular, Brushes.Black, startX, startY + offsetY);
+            offsetY += 20;
+            e.Graphics.DrawString($"Teléfono: {teltxt.Text}", fontRegular, Brushes.Black, startX, startY + offsetY);
+            offsetY += 20;
+            e.Graphics.DrawString($"Dirección: {directxt.Text}", fontRegular, Brushes.Black, startX, startY + offsetY);
+            offsetY += 40;
+
+            // Determinar el método de pago y calcular ajustes
+            string metodoPago = "Efectivo";
+            decimal ajustePorcentaje = 0;
+
+            if (rb_deb.Checked)
+            {
+                metodoPago = "Débito (10%)";
+                ajustePorcentaje = 0.10m; // 10% para débito
+            }
+            else if (rb_cred.Checked)
+            {
+                metodoPago = "Crédito (20%)";
+                ajustePorcentaje = 0.20m; // 20% para crédito
+            }
+
+            // Mostrar el método de pago
+            e.Graphics.DrawString($"Método de Pago: {metodoPago}", fontBold, Brushes.Black, startX, startY + offsetY);
+            offsetY += 40;
+
+            // Dibujar líneas de encabezado para productos
+            e.Graphics.DrawString("Cantidad", fontBold, Brushes.Black, startX, startY + offsetY);
+            e.Graphics.DrawString("Artículo", fontBold, Brushes.Black, startX + 100, startY + offsetY);
+            e.Graphics.DrawString("P. Unit.", fontBold, Brushes.Black, startX + 300, startY + offsetY);
+            e.Graphics.DrawString("Importe", fontBold, Brushes.Black, startX + 400, startY + offsetY);
+            offsetY += 20;
+
+            // Recorrer la tabla de productos y agregar al documento
+            decimal totalAjustado = 0;
+            foreach (DataRow row in pedtab.Rows)
+            {
+                int cantidad = Convert.ToInt32(row["Cantidad"]);
+                string articulo = row["Articulo"].ToString();
+                decimal importe = Convert.ToDecimal(row["Importe"]);
+                decimal precioUnitario = importe / cantidad;
+
+                // Calcular precio ajustado
+                decimal precioUnitarioAjustado = precioUnitario * (1 + ajustePorcentaje);
+                decimal importeAjustado = importe * (1 + ajustePorcentaje);
+                totalAjustado += importeAjustado;
+
+                e.Graphics.DrawString(cantidad.ToString(), fontRegular, Brushes.Black, startX, startY + offsetY);
+                e.Graphics.DrawString(articulo, fontRegular, Brushes.Black, startX + 100, startY + offsetY);
+                e.Graphics.DrawString(precioUnitarioAjustado.ToString("C2"), fontRegular, Brushes.Black, startX + 300, startY + offsetY);
+                e.Graphics.DrawString(importeAjustado.ToString("C2"), fontRegular, Brushes.Black, startX + 400, startY + offsetY);
+                offsetY += 20;
+            }
+
+            // Dibujar total ajustado
+            offsetY += 20;
+            e.Graphics.DrawString($"Total: {totalAjustado:C2}", fontBold, Brushes.Black, startX + 300, startY + offsetY);
+        }
+
+
+
+
+
+        private void guardarpdf_Click(object sender, EventArgs e)
+        {
+            numFactura = nfc(); // Genera el número de factura
+            nfactxt.Text = "N° " + numFactura.ToString(); // Muestra el número en el formulario, si es necesario
+
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "PDF Files (*.pdf)|*.pdf";
+                saveFileDialog.Title = "Guardar Factura como PDF";
+                saveFileDialog.FileName = $"factura_{numFactura}.pdf"; // Nombre de archivo con número de factura
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string rutaArchivo = saveFileDialog.FileName;
+
+                    using (FileStream fs = new FileStream(rutaArchivo, FileMode.Create, FileAccess.Write, FileShare.None))
+                    {
+                        PdfWriter writer = new PdfWriter(fs);
+                        PdfDocument pdf = new PdfDocument(writer);
+                        Document document = new Document(pdf);
+
+                        // Agrega los datos del comercio y número de factura
+                        document.Add(new Paragraph(nomcomercio).SetFontSize(16).SetBold());
+                        document.Add(new Paragraph(direccion));
+                        document.Add(new Paragraph($"Teléfono: {telefono}"));
+                        document.Add(new Paragraph($"CUIT: {cuit}"));
+                        document.Add(new Paragraph($"Factura N°: {numFactura}"));
+                        document.Add(new Paragraph($"Fecha: {DateTime.Now.ToShortDateString()}"));
+                        document.Add(new LineSeparator(new SolidLine()).SetMarginTop(10));
+
+                        // Agrega los datos del cliente
+                        document.Add(new Paragraph($"Cliente: {apenomtxt.Text}"));
+                        document.Add(new Paragraph($"DNI: {dnitxt.Text}"));
+                        document.Add(new Paragraph($"Teléfono: {teltxt.Text}"));
+                        document.Add(new Paragraph($"Dirección: {directxt.Text}"));
+                        document.Add(new LineSeparator(new SolidLine()).SetMarginTop(10));
+
+                        // Agrega un encabezado para los artículos
+                        document.Add(new Paragraph("Detalles de la compra").SetBold().SetMarginTop(10));
+
+                        // Determinar el método de pago
+                        string metodoPago = "Efectivo";
+                        decimal ajustePorcentaje = 0;
+
+                        if (rb_deb.Checked)
+                        {
+                            metodoPago = "Débito";
+                            ajustePorcentaje = 0.10m; // 10% para débito
+                        }
+                        else if (rb_cred.Checked)
+                        {
+                            metodoPago = "Crédito";
+                            ajustePorcentaje = 0.20m; // 20% para crédito
+                        }
+
+                        // Mostrar el método de pago
+                        document.Add(new Paragraph($"Método de Pago: {metodoPago}").SetBold());
+                        document.Add(new LineSeparator(new SolidLine()).SetMarginTop(10));
+
+                        // Crea una tabla de artículos
+                        Table table = new Table(4); // Número de columnas
+                        table.AddHeaderCell("Cantidad");
+                        table.AddHeaderCell("Artículo");
+                        table.AddHeaderCell("P. Unitario ");
+                        table.AddHeaderCell("Importe");
+
+                        // Recorrer la tabla `pedtab` para agregar los artículos
+                        decimal totalAjustado = 0;
+                        foreach (DataRow row in pedtab.Rows)
+                        {
+                            int cantidad = Convert.ToInt32(row["Cantidad"]);
+                            string articulo = row["Articulo"].ToString();
+                            decimal importe = Convert.ToDecimal(row["Importe"]);
+                            decimal precioUnitario = importe / cantidad;
+
+                            // Calcular precio ajustado
+                            decimal precioUnitarioAjustado = precioUnitario * (1 + ajustePorcentaje);
+                            decimal importeAjustado = importe * (1 + ajustePorcentaje);
+                            totalAjustado += importeAjustado;
+
+                            // Cantidad
+                            table.AddCell(cantidad.ToString());
+                            // Artículo
+                            table.AddCell(articulo);
+                            // Precio Unitario Ajustado
+                            table.AddCell(precioUnitarioAjustado.ToString("C2"));
+                            // Importe Ajustado
+                            table.AddCell(importeAjustado.ToString("C2"));
+                        }
+
+                        document.Add(table);
+
+                        // Agrega el total ajustado de la factura
+                        document.Add(new Paragraph($"Total : {totalAjustado:C2}").SetBold().SetMarginTop(10));
+
+                        document.Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("La operación de guardado fue cancelada.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+
+        private void button1_Click_1(object sender, EventArgs e)  // BOTON IMPRIMIR
+        {         
+            numFactura = nfc(); // Genera el número de factura
+            nfactxt.Text = "N° " + numFactura.ToString();
+
+            PrintDialog printDialog = new PrintDialog();
+            printDialog.Document = printDocument1;
+
+            if (printDialog.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.Print();
+            }
+        }
+        
+        
+        private void CargarDatosComercio()
+        {
+            con.Open();
+            MySqlCommand cmd = new MySqlCommand("SELECT * FROM config WHERE idconfig = 1", con);//nomcomercio, direccion, telefono, cuit
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                nomcomercio= reader["nomcomercio"].ToString();
+                direccion = reader["direccion"].ToString();
+                telefono = reader["telefono"].ToString();
+                cuit = reader["cuit"].ToString();
+                pagosdebito = Convert.ToDecimal(reader["pagosdebito"]);
+                pagoscredito = Convert.ToDecimal(reader["pagoscredito"]);
+             //   pagoscredito = reader["pagoscredito"].ToString();
+
+            }
+            else
+            {
+                MessageBox.Show("No se encontraron los datos del comercio.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            reader.Close();
+            con.Close();
+        }
+
+    
+    }
+        
 }
 
 
 
+
+/* */

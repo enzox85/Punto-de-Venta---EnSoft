@@ -103,6 +103,36 @@ namespace ABM2.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _155951171_249236086853286_2129671973490496428_n {
+            get {
+                object obj = ResourceManager.GetObject("155951171_249236086853286_2129671973490496428_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _155951171_249236086853286_2129671973490496428_n1 {
+            get {
+                object obj = ResourceManager.GetObject("155951171_249236086853286_2129671973490496428_n1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _155951171_249236086853286_2129671973490496428_n2 {
+            get {
+                object obj = ResourceManager.GetObject("155951171_249236086853286_2129671973490496428_n2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1738697 {
             get {
                 object obj = ResourceManager.GetObject("1738697", resourceCulture);
@@ -126,6 +156,46 @@ namespace ABM2.Properties {
         internal static System.Drawing.Bitmap _2103848 {
             get {
                 object obj = ResourceManager.GetObject("2103848", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2155685 {
+            get {
+                object obj = ResourceManager.GetObject("2155685", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _21556851 {
+            get {
+                object obj = ResourceManager.GetObject("21556851", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2751615 {
+            get {
+                object obj = ResourceManager.GetObject("2751615", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _27516151 {
+            get {
+                object obj = ResourceManager.GetObject("27516151", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +233,59 @@ namespace ABM2.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _43055892 {
+            get {
+                object obj = ResourceManager.GetObject("43055892", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _43055893 {
+            get {
+                object obj = ResourceManager.GetObject("43055893", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _476_ {
+            get {
+                object obj = ResourceManager.GetObject("(476)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _5408490 {
             get {
                 object obj = ResourceManager.GetObject("5408490", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _71a0ea88_4580_448f_9646_2da9cfc870c4 {
+            get {
+                object obj = ResourceManager.GetObject("71a0ea88-4580-448f-9646-2da9cfc870c4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _71a0ea88_4580_448f_9646_2da9cfc870c41 {
+            get {
+                object obj = ResourceManager.GetObject("71a0ea88-4580-448f-9646-2da9cfc870c41", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +306,46 @@ namespace ABM2.Properties {
         internal static System.Drawing.Bitmap AgregarPROOVEDOR {
             get {
                 object obj = ResourceManager.GetObject("AgregarPROOVEDOR", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap b053e995_7f00_4e49_9f78_50918c8d01ff {
+            get {
+                object obj = ResourceManager.GetObject("b053e995-7f00-4e49-9f78-50918c8d01ff", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap business_team_employees_user_icon_free_vector {
+            get {
+                object obj = ResourceManager.GetObject("business-team-employees-user-icon-free-vector", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap business_team_employees_user_icon_free_vector1 {
+            get {
+                object obj = ResourceManager.GetObject("business-team-employees-user-icon-free-vector1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap business_team_employees_user_icon_free_vector2 {
+            get {
+                object obj = ResourceManager.GetObject("business-team-employees-user-icon-free-vector2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,6 +403,36 @@ namespace ABM2.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2024_11_11_164301 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2024-11-11 164301", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2024_11_11_1643011 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2024-11-11 1643011", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2024_11_11_173328 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2024-11-11 173328", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cash_register_icon_style_vector {
             get {
                 object obj = ResourceManager.GetObject("cash-register-icon-style-vector", resourceCulture);
@@ -253,9 +443,49 @@ namespace ABM2.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap company_staff_rgb_color_icon_for_dark_theme_vector {
+            get {
+                object obj = ResourceManager.GetObject("company-staff-rgb-color-icon-for-dark-theme-vector", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap d26373e5_7c98_431c_a811_68de056d3ea0 {
+            get {
+                object obj = ResourceManager.GetObject("d26373e5-7c98-431c-a811-68de056d3ea0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap da968169_1183_4898_a25c_a90ef27e895e {
+            get {
+                object obj = ResourceManager.GetObject("da968169-1183-4898-a25c-a90ef27e895e", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Edit_User_80_icon_icons_com_57329 {
             get {
                 object obj = ResourceManager.GetObject("Edit_User-80_icon-icons.com_57329", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fe071bba_06a9_4faf_bd9f_cb5977c768f3 {
+            get {
+                object obj = ResourceManager.GetObject("fe071bba-06a9-4faf-bd9f-cb5977c768f3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -363,6 +593,16 @@ namespace ABM2.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logo_1_Multrirubro_MM_colibri {
+            get {
+                object obj = ResourceManager.GetObject("Logo_1 Multrirubro_MM_colibri", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap modificar {
             get {
                 object obj = ResourceManager.GetObject("modificar", resourceCulture);
@@ -403,10 +643,75 @@ namespace ABM2.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap png_clipart_android_lollipop_icons_settings_android_setting_icon_thumbnail {
+            get {
+                object obj = ResourceManager.GetObject("png-clipart-android-lollipop-icons-settings-android-setting-icon-thumbnail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_clipart_heart_symbol_circle_font_close_red_and_white_cancel_icon_heart_window_thumbnail {
+            get {
+                object obj = ResourceManager.GetObject("png-clipart-heart-symbol-circle-font-close-red-and-white-cancel-icon-heart-window" +
+                        "-thumbnail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_clipart_heart_symbol_circle_font_close_red_and_white_cancel_icon_heart_window_thumbnail1 {
+            get {
+                object obj = ResourceManager.GetObject("png-clipart-heart-symbol-circle-font-close-red-and-white-cancel-icon-heart-window" +
+                        "-thumbnail1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap png_transparent_bank_account_wire_transfer_cheque_money_transfer_bank_leaf_text_logo_thumbnail {
             get {
                 object obj = ResourceManager.GetObject("png-transparent-bank-account-wire-transfer-cheque-money-transfer-bank-leaf-text-l" +
                         "ogo-thumbnail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_bank_account_wire_transfer_cheque_money_transfer_bank_leaf_text_logo_thumbnail1 {
+            get {
+                object obj = ResourceManager.GetObject("png-transparent-bank-account-wire-transfer-cheque-money-transfer-bank-leaf-text-l" +
+                        "ogo-thumbnail1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_bank_account_wire_transfer_cheque_money_transfer_bank_leaf_text_logo_thumbnail2 {
+            get {
+                object obj = ResourceManager.GetObject("png-transparent-bank-account-wire-transfer-cheque-money-transfer-bank-leaf-text-l" +
+                        "ogo-thumbnail2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_bank_account_wire_transfer_cheque_money_transfersdsa_leaf_text_logo_thumbnail {
+            get {
+                object obj = ResourceManager.GetObject("png-transparent-bank-account-wire-transfer-cheque-money-transfersdsa-leaf-text-lo" +
+                        "go-thumbnail", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -519,6 +824,16 @@ namespace ABM2.Properties {
         internal static System.Drawing.Bitmap Update__Label_Reading_and_FODMAPs2 {
             get {
                 object obj = ResourceManager.GetObject("Update_ Label Reading and FODMAPs2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap VOLVER {
+            get {
+                object obj = ResourceManager.GetObject("VOLVER", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -41,6 +41,7 @@ namespace ABM2
             this.totxt = new System.Windows.Forms.Label();
             this.coinctxt = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +49,7 @@ namespace ABM2
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(100, 27);
+            this.label1.Location = new System.Drawing.Point(24, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 29);
             this.label1.TabIndex = 17;
@@ -60,7 +61,7 @@ namespace ABM2
             this.busctxt.BackColor = System.Drawing.SystemColors.Info;
             this.busctxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.busctxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.busctxt.Location = new System.Drawing.Point(205, 19);
+            this.busctxt.Location = new System.Drawing.Point(129, 16);
             this.busctxt.Name = "busctxt";
             this.busctxt.Size = new System.Drawing.Size(763, 41);
             this.busctxt.TabIndex = 1;
@@ -128,11 +129,12 @@ namespace ABM2
             this.idCtxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.idCtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idCtxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.idCtxt.Location = new System.Drawing.Point(857, 19);
+            this.idCtxt.Location = new System.Drawing.Point(781, 16);
             this.idCtxt.Name = "idCtxt";
             this.idCtxt.Size = new System.Drawing.Size(111, 41);
             this.idCtxt.TabIndex = 21;
             this.idCtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.idCtxt.Visible = false;
             // 
             // modificarbut
             // 
@@ -165,7 +167,7 @@ namespace ABM2
             this.totxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.totxt.AutoSize = true;
             this.totxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totxt.Location = new System.Drawing.Point(974, 9);
+            this.totxt.Location = new System.Drawing.Point(898, 6);
             this.totxt.Name = "totxt";
             this.totxt.Size = new System.Drawing.Size(80, 29);
             this.totxt.TabIndex = 22;
@@ -177,7 +179,7 @@ namespace ABM2
             this.coinctxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.coinctxt.AutoSize = true;
             this.coinctxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.coinctxt.Location = new System.Drawing.Point(974, 52);
+            this.coinctxt.Location = new System.Drawing.Point(898, 49);
             this.coinctxt.Name = "coinctxt";
             this.coinctxt.Size = new System.Drawing.Size(183, 29);
             this.coinctxt.TabIndex = 23;
@@ -194,11 +196,22 @@ namespace ABM2
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(1199, 9);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(133, 66);
+            this.button3.TabIndex = 25;
+            this.button3.Text = "Consumidor\r\nFinal\r\n";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // frm5_clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1482, 854);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.coinctxt);
             this.Controls.Add(this.totxt);
@@ -231,5 +244,6 @@ namespace ABM2
         private System.Windows.Forms.Label totxt;
         private System.Windows.Forms.Label coinctxt;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
     }
 }

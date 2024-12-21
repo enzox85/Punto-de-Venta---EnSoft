@@ -58,8 +58,6 @@ namespace ABM2
                                 "Atención",
                                 MessageBoxButtons.OK,MessageBoxIcon.Warning);return;
             }
-
-         
             else
             {
                 con.Open();
@@ -73,8 +71,6 @@ namespace ABM2
                 if (fila > 0)
                 {
                     MessageBox.Show("Los datos se guardaron correctamente.","Éxito",MessageBoxButtons.OK,MessageBoxIcon.Information);
-
-                   
                     DialogResult dialogResult = MessageBox.Show("¿Desea agregar otro cliente?","MASTER",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
                     if (dialogResult == DialogResult.Yes)
                     {
@@ -117,6 +113,3 @@ namespace ABM2
        
     }
 }
-/*cmdagregar.Parameters.AddWithValue("@ape_nom", datostxt.Text.Trim());
-cmdagregar.Parameters.AddWithValue("@telefono", teltxt.Text.Trim());
-cmdagregar.Parameters.AddWithValue("@domicilio", direcctxt.Text.Trim());*/

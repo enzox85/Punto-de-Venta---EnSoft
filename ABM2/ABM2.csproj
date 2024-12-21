@@ -33,11 +33,53 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
-      <HintPath>..\packages\BouncyCastle.Cryptography.2.3.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.5.0-beta.105\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
     </Reference>
     <Reference Include="Google.Protobuf, Version=3.26.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.26.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.barcodes, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.barcodes.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.bouncy-castle-adapter, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.bouncy-castle-adapter.8.0.5\lib\net461\itext.bouncy-castle-adapter.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.bouncy-castle-connector, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.bouncy-castle-connector.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.commons, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.commons.8.0.5\lib\net461\itext.commons.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.forms, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.forms.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.io, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.io.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.kernel, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.layout, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.layout.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.pdfa, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.pdfua, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.pdfua.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.sign, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.sign.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.styledxmlparser, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.styledxmlparser.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.svg, Version=8.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext.8.0.5\lib\net461\itext.svg.dll</HintPath>
     </Reference>
     <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
@@ -51,8 +93,29 @@
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.5.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.5.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.5.0.0\lib\net461\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.5.0.0\lib\net461\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.5.0.0\lib\net461\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.5.0.0\lib\net461\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=9.0.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.9.0.0\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="ShutterPrism.MVC.FontAwesome, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ShutterPrism.MVC.FontAwsome.1.0.1\lib\ShutterPrism.MVC.FontAwesome.dll</HintPath>
@@ -87,6 +150,9 @@
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -101,6 +167,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomMessageBox.Designer.cs">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm01_LOGUIN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +190,12 @@
     </Compile>
     <Compile Include="frm10_Ventas.Designer.cs">
       <DependentUpon>frm10_Ventas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm11_CONFIGURAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm11_CONFIGURAR.Designer.cs">
+      <DependentUpon>frm11_CONFIGURAR.cs</DependentUpon>
     </Compile>
     <Compile Include="frm1_articulos.cs">
       <SubType>Form</SubType>
@@ -166,6 +244,12 @@
     </Compile>
     <Compile Include="frm8_CuentaCorrienteDetalles.Designer.cs">
       <DependentUpon>frm8_CuentaCorrienteDetalles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm8_CuentaCorrienteEntregas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm8_CuentaCorrienteEntregas.Designer.cs">
+      <DependentUpon>frm8_CuentaCorrienteEntregas.cs</DependentUpon>
     </Compile>
     <Compile Include="frm8_CuentaCorrienteMENU.cs">
       <SubType>Form</SubType>
@@ -233,8 +317,17 @@
     <Compile Include="frm9_PROOV_modificar.Designer.cs">
       <DependentUpon>frm9_PROOV_modificar.cs</DependentUpon>
     </Compile>
+    <Compile Include="frn12_CONTROLCAJA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frn12_CONTROLCAJA.Designer.cs">
+      <DependentUpon>frn12_CONTROLCAJA.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CustomMessageBox.resx">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm01_LOGUIN.resx">
       <DependentUpon>frm01_LOGUIN.cs</DependentUpon>
     </EmbeddedResource>
@@ -243,6 +336,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm10_Ventas.resx">
       <DependentUpon>frm10_Ventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm11_CONFIGURAR.resx">
+      <DependentUpon>frm11_CONFIGURAR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm1_articulos.resx">
       <DependentUpon>frm1_articulos.cs</DependentUpon>
@@ -267,6 +363,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm8_CuentaCorrienteDetalles.resx">
       <DependentUpon>frm8_CuentaCorrienteDetalles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm8_CuentaCorrienteEntregas.resx">
+      <DependentUpon>frm8_CuentaCorrienteEntregas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm8_CuentaCorrienteMENU.resx">
       <DependentUpon>frm8_CuentaCorrienteMENU.cs</DependentUpon>
@@ -300,6 +399,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm9_PROOV_modificar.resx">
       <DependentUpon>frm9_PROOV_modificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frn12_CONTROLCAJA.resx">
+      <DependentUpon>frn12_CONTROLCAJA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -445,6 +547,37 @@
     <Content Include="Content\css\font-awesome.css" />
     <Content Include="Content\css\font-awesome.min.css" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <None Include="Resources\png-clipart-heart-symbol-circle-font-close-red-and-white-cancel-icon-heart-window-thumbnail1.png" />
+    <None Include="Resources\21556851.png" />
+    <None Include="Resources\71a0ea88-4580-448f-9646-2da9cfc870c41.png" />
+    <None Include="Resources\155951171_249236086853286_2129671973490496428_n2.jpg" />
+    <None Include="Resources\155951171_249236086853286_2129671973490496428_n1.jpg" />
+    <None Include="Resources\155951171_249236086853286_2129671973490496428_n.jpg" />
+    <None Include="Resources\Logo_1 Multrirubro_MM_colibri.png" />
+    <None Include="Resources\27516151.png" />
+    <None Include="Resources\2751615.png" />
+    <None Include="Resources\43055893.png" />
+    <None Include="Resources\2155685.png" />
+    <None Include="Resources\png-clipart-heart-symbol-circle-font-close-red-and-white-cancel-icon-heart-window-thumbnail.png" />
+    <None Include="Resources\da968169-1183-4898-a25c-a90ef27e895e.png" />
+    <None Include="Resources\d26373e5-7c98-431c-a811-68de056d3ea0.png" />
+    <None Include="Resources\71a0ea88-4580-448f-9646-2da9cfc870c4.png" />
+    <None Include="Resources\fe071bba-06a9-4faf-bd9f-cb5977c768f3.png" />
+    <None Include="Resources\VOLVER.png" />
+    <None Include="Resources\43055892.png" />
+    <None Include="Resources\Captura de pantalla 2024-11-11 173328.png" />
+    <None Include="Resources\business-team-employees-user-icon-free-vector.png" />
+    <None Include="Resources\business-team-employees-user-icon-free-vector1.jpg" />
+    <None Include="Resources\business-team-employees-user-icon-free-vector.jpg" />
+    <None Include="Resources\company-staff-rgb-color-icon-for-dark-theme-vector.jpg" />
+    <None Include="Resources\Captura de pantalla 2024-11-11 1643011.png" />
+    <None Include="Resources\Captura de pantalla 2024-11-11 164301.png" />
+    <None Include="Resources\png-transparent-bank-account-wire-transfer-cheque-money-transfersdsa-leaf-text-logo-thumbnail.png" />
+    <None Include="Resources\png-transparent-bank-account-wire-transfer-cheque-money-transfer-bank-leaf-text-logo-thumbnail2.png" />
+    <None Include="Resources\%28476%29.jpg" />
+    <None Include="Resources\b053e995-7f00-4e49-9f78-50918c8d01ff.png" />
+    <None Include="Resources\png-clipart-android-lollipop-icons-settings-android-setting-icon-thumbnail.png" />
+    <None Include="Resources\png-transparent-bank-account-wire-transfer-cheque-money-transfer-bank-leaf-text-logo-thumbnail1.png" />
     <None Include="Resources\pngwing.com.png" />
     <None Include="Resources\png-transparent-sales-computer-icons-business-purchasing-marketing-sales-company-text-people-thumbnail.png" />
     <None Include="Resources\12354461.png" />

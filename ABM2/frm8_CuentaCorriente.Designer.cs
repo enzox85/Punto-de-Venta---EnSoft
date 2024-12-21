@@ -29,16 +29,12 @@ namespace ABM2
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.bustxt = new System.Windows.Forms.TextBox();
             this.dgvcc = new System.Windows.Forms.DataGridView();
-            this.cancelar = new System.Windows.Forms.Button();
-            this.vendido = new System.Windows.Forms.Button();
-            this.imprimir = new System.Windows.Forms.Button();
             this.moneyintxt = new System.Windows.Forms.TextBox();
             this.entregatxt = new System.Windows.Forms.TextBox();
             this.preciounitxt = new System.Windows.Forms.TextBox();
@@ -55,14 +51,19 @@ namespace ABM2
             this.apenomtxt = new System.Windows.Forms.Label();
             this.dnitxt = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.fechapedido = new System.Windows.Forms.DateTimePicker();
             this.button2 = new System.Windows.Forms.Button();
             this.idartxt = new System.Windows.Forms.TextBox();
             this.idcuentatxt = new System.Windows.Forms.TextBox();
             this.saldotxt = new System.Windows.Forms.TextBox();
             this.totalnuventxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.entretatip = new System.Windows.Forms.ToolTip(this.components);
+            this.cancelar = new System.Windows.Forms.Button();
+            this.vendido = new System.Windows.Forms.Button();
+            this.imprimir = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvartcc)).BeginInit();
             this.SuspendLayout();
@@ -80,12 +81,12 @@ namespace ABM2
             // bustxt
             // 
             this.bustxt.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.bustxt.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.bustxt.BackColor = System.Drawing.SystemColors.Info;
             this.bustxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bustxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bustxt.Location = new System.Drawing.Point(128, 11);
+            this.bustxt.Location = new System.Drawing.Point(140, 20);
             this.bustxt.Name = "bustxt";
-            this.bustxt.Size = new System.Drawing.Size(592, 38);
+            this.bustxt.Size = new System.Drawing.Size(578, 38);
             this.bustxt.TabIndex = 28;
             this.bustxt.TextChanged += new System.EventHandler(this.bustxt_TextChanged_1);
             // 
@@ -108,53 +109,23 @@ namespace ABM2
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvcc.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvcc.Location = new System.Drawing.Point(726, 213);
+            this.dgvcc.Location = new System.Drawing.Point(720, 213);
             this.dgvcc.Name = "dgvcc";
             this.dgvcc.ReadOnly = true;
             this.dgvcc.RowHeadersWidth = 51;
             this.dgvcc.RowTemplate.Height = 24;
+            this.dgvcc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvcc.Size = new System.Drawing.Size(698, 567);
             this.dgvcc.TabIndex = 37;
-            // 
-            // cancelar
-            // 
-            this.cancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cancelar.Location = new System.Drawing.Point(630, 150);
-            this.cancelar.Name = "cancelar";
-            this.cancelar.Size = new System.Drawing.Size(94, 46);
-            this.cancelar.TabIndex = 40;
-            this.cancelar.Text = "CANCELAR VENTA";
-            this.cancelar.UseVisualStyleBackColor = true;
-            // 
-            // vendido
-            // 
-            this.vendido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.vendido.Location = new System.Drawing.Point(631, 99);
-            this.vendido.Name = "vendido";
-            this.vendido.Size = new System.Drawing.Size(93, 43);
-            this.vendido.TabIndex = 39;
-            this.vendido.Text = "VENDER";
-            this.vendido.UseVisualStyleBackColor = true;
-            this.vendido.Click += new System.EventHandler(this.vendido_Click_1);
-            // 
-            // imprimir
-            // 
-            this.imprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.imprimir.Location = new System.Drawing.Point(538, 97);
-            this.imprimir.Name = "imprimir";
-            this.imprimir.Size = new System.Drawing.Size(87, 45);
-            this.imprimir.TabIndex = 38;
-            this.imprimir.Text = "CARGAR";
-            this.imprimir.UseVisualStyleBackColor = true;
-            this.imprimir.Click += new System.EventHandler(this.imprimir_Click);
+            this.dgvcc.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvcc_CellFormatting_1);
             // 
             // moneyintxt
             // 
             this.moneyintxt.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.moneyintxt.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.moneyintxt.BackColor = System.Drawing.SystemColors.Info;
             this.moneyintxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.moneyintxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.moneyintxt.Location = new System.Drawing.Point(377, 798);
+            this.moneyintxt.Location = new System.Drawing.Point(447, 797);
             this.moneyintxt.Name = "moneyintxt";
             this.moneyintxt.Size = new System.Drawing.Size(219, 38);
             this.moneyintxt.TabIndex = 41;
@@ -166,7 +137,7 @@ namespace ABM2
             this.entregatxt.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.entregatxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.entregatxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.entregatxt.Location = new System.Drawing.Point(947, 797);
+            this.entregatxt.Location = new System.Drawing.Point(845, 793);
             this.entregatxt.Name = "entregatxt";
             this.entregatxt.Size = new System.Drawing.Size(219, 38);
             this.entregatxt.TabIndex = 42;
@@ -174,6 +145,7 @@ namespace ABM2
             // 
             // preciounitxt
             // 
+            this.preciounitxt.BackColor = System.Drawing.SystemColors.Info;
             this.preciounitxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.preciounitxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.preciounitxt.Location = new System.Drawing.Point(18, 151);
@@ -183,6 +155,7 @@ namespace ABM2
             // 
             // cantxt
             // 
+            this.cantxt.BackColor = System.Drawing.SystemColors.Info;
             this.cantxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cantxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cantxt.Location = new System.Drawing.Point(185, 151);
@@ -195,6 +168,7 @@ namespace ABM2
             // 
             // imptxt
             // 
+            this.imptxt.BackColor = System.Drawing.SystemColors.Info;
             this.imptxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.imptxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.imptxt.Location = new System.Drawing.Point(276, 151);
@@ -216,12 +190,14 @@ namespace ABM2
             // coincidtxt
             // 
             this.coincidtxt.AutoSize = true;
-            this.coincidtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.coincidtxt.Location = new System.Drawing.Point(12, 77);
+            this.coincidtxt.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.coincidtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.coincidtxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.coincidtxt.Location = new System.Drawing.Point(27, 77);
             this.coincidtxt.Name = "coincidtxt";
-            this.coincidtxt.Size = new System.Drawing.Size(155, 25);
+            this.coincidtxt.Size = new System.Drawing.Size(60, 32);
             this.coincidtxt.TabIndex = 46;
-            this.coincidtxt.Text = "Coincidencias:";
+            this.coincidtxt.Text = ".....";
             // 
             // label6
             // 
@@ -250,12 +226,13 @@ namespace ABM2
             this.idcctxt2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.idcctxt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idcctxt2.ForeColor = System.Drawing.Color.Lime;
-            this.idcctxt2.Location = new System.Drawing.Point(756, 10);
+            this.idcctxt2.Location = new System.Drawing.Point(1248, 11);
             this.idcctxt2.Name = "idcctxt2";
             this.idcctxt2.Size = new System.Drawing.Size(89, 38);
             this.idcctxt2.TabIndex = 50;
             this.idcctxt2.Text = "         ";
             this.idcctxt2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.idcctxt2.Visible = false;
             this.idcctxt2.TextChanged += new System.EventHandler(this.idcctxt2_TextChanged_1);
             // 
             // dgvartcc
@@ -285,7 +262,7 @@ namespace ABM2
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvartcc.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvartcc.Location = new System.Drawing.Point(12, 213);
+            this.dgvartcc.Location = new System.Drawing.Point(6, 213);
             this.dgvartcc.Name = "dgvartcc";
             this.dgvartcc.ReadOnly = true;
             this.dgvartcc.RowHeadersVisible = false;
@@ -300,71 +277,67 @@ namespace ABM2
             // directxt
             // 
             this.directxt.AutoSize = true;
-            this.directxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.directxt.Location = new System.Drawing.Point(1123, 118);
+            this.directxt.BackColor = System.Drawing.Color.LightGreen;
+            this.directxt.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.directxt.Location = new System.Drawing.Point(979, 176);
             this.directxt.Name = "directxt";
-            this.directxt.Size = new System.Drawing.Size(95, 29);
+            this.directxt.Size = new System.Drawing.Size(36, 27);
             this.directxt.TabIndex = 54;
-            this.directxt.Text = "Importe";
+            this.directxt.Text = "....";
             // 
             // teltxt
             // 
             this.teltxt.AutoSize = true;
-            this.teltxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teltxt.Location = new System.Drawing.Point(1123, 73);
+            this.teltxt.BackColor = System.Drawing.Color.LightGreen;
+            this.teltxt.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teltxt.Location = new System.Drawing.Point(979, 92);
             this.teltxt.Name = "teltxt";
-            this.teltxt.Size = new System.Drawing.Size(122, 29);
+            this.teltxt.Size = new System.Drawing.Size(36, 27);
             this.teltxt.TabIndex = 55;
-            this.teltxt.Text = "Teléfono :";
+            this.teltxt.Text = "....";
             // 
             // apenomtxt
             // 
             this.apenomtxt.AutoSize = true;
-            this.apenomtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.apenomtxt.Location = new System.Drawing.Point(751, 73);
+            this.apenomtxt.BackColor = System.Drawing.Color.LightGreen;
+            this.apenomtxt.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.apenomtxt.Location = new System.Drawing.Point(977, 49);
             this.apenomtxt.Name = "apenomtxt";
-            this.apenomtxt.Size = new System.Drawing.Size(123, 29);
+            this.apenomtxt.Size = new System.Drawing.Size(36, 27);
             this.apenomtxt.TabIndex = 57;
-            this.apenomtxt.Text = "Ap. y Nom";
+            this.apenomtxt.Text = "....";
             // 
             // dnitxt
             // 
             this.dnitxt.AutoSize = true;
-            this.dnitxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dnitxt.Location = new System.Drawing.Point(769, 120);
+            this.dnitxt.BackColor = System.Drawing.Color.LightGreen;
+            this.dnitxt.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dnitxt.Location = new System.Drawing.Point(979, 131);
             this.dnitxt.Name = "dnitxt";
-            this.dnitxt.Size = new System.Drawing.Size(54, 29);
+            this.dnitxt.Size = new System.Drawing.Size(36, 27);
             this.dnitxt.TabIndex = 56;
-            this.dnitxt.Text = "DNI";
+            this.dnitxt.Text = "....";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1055, 802);
+            this.label2.Location = new System.Drawing.Point(1088, 798);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(111, 29);
             this.label2.TabIndex = 59;
             this.label2.Text = "SALDO : ";
             // 
-            // fechapedido
-            // 
-            this.fechapedido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.fechapedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fechapedido.Location = new System.Drawing.Point(1079, 18);
-            this.fechapedido.Name = "fechapedido";
-            this.fechapedido.Size = new System.Drawing.Size(345, 27);
-            this.fechapedido.TabIndex = 61;
-            // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(1241, 709);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(535, 86);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(174, 59);
+            this.button2.Size = new System.Drawing.Size(118, 28);
             this.button2.TabIndex = 63;
-            this.button2.Text = "HISTORIAL";
+            this.button2.Text = "DETALLES";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // idartxt
@@ -374,11 +347,12 @@ namespace ABM2
             this.idartxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.idartxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idartxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.idartxt.Location = new System.Drawing.Point(654, 55);
+            this.idartxt.Location = new System.Drawing.Point(1343, 10);
             this.idartxt.Name = "idartxt";
             this.idartxt.Size = new System.Drawing.Size(66, 38);
             this.idartxt.TabIndex = 36;
             this.idartxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.idartxt.Visible = false;
             // 
             // idcuentatxt
             // 
@@ -387,19 +361,20 @@ namespace ABM2
             this.idcuentatxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.idcuentatxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idcuentatxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.idcuentatxt.Location = new System.Drawing.Point(868, 11);
+            this.idcuentatxt.Location = new System.Drawing.Point(1343, 54);
             this.idcuentatxt.Name = "idcuentatxt";
             this.idcuentatxt.Size = new System.Drawing.Size(66, 38);
             this.idcuentatxt.TabIndex = 64;
             this.idcuentatxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.idcuentatxt.Visible = false;
             // 
             // saldotxt
             // 
             this.saldotxt.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.saldotxt.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.saldotxt.BackColor = System.Drawing.SystemColors.Info;
             this.saldotxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.saldotxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saldotxt.Location = new System.Drawing.Point(1178, 797);
+            this.saldotxt.Location = new System.Drawing.Point(1199, 793);
             this.saldotxt.Name = "saldotxt";
             this.saldotxt.Size = new System.Drawing.Size(219, 38);
             this.saldotxt.TabIndex = 65;
@@ -410,9 +385,9 @@ namespace ABM2
             this.totalnuventxt.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.totalnuventxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totalnuventxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalnuventxt.Location = new System.Drawing.Point(805, 797);
+            this.totalnuventxt.Location = new System.Drawing.Point(1199, 793);
             this.totalnuventxt.Name = "totalnuventxt";
-            this.totalnuventxt.Size = new System.Drawing.Size(119, 38);
+            this.totalnuventxt.Size = new System.Drawing.Size(219, 38);
             this.totalnuventxt.TabIndex = 66;
             this.totalnuventxt.Visible = false;
             // 
@@ -420,35 +395,112 @@ namespace ABM2
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(282, 802);
+            this.label4.Location = new System.Drawing.Point(348, 802);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 29);
             this.label4.TabIndex = 67;
             this.label4.Text = "PAGO :";
             // 
-            // entretatip
+            // cancelar
             // 
-            this.entretatip.ToolTipTitle = "Registre el valor hy presione Enter";
+            this.cancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cancelar.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.cancelar.BackgroundImage = global::ABM2.Properties.Resources.png_clipart_heart_symbol_circle_font_close_red_and_white_cancel_icon_heart_window_thumbnail1;
+            this.cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cancelar.Location = new System.Drawing.Point(628, 149);
+            this.cancelar.Name = "cancelar";
+            this.cancelar.Size = new System.Drawing.Size(61, 50);
+            this.cancelar.TabIndex = 40;
+            this.cancelar.UseVisualStyleBackColor = false;
+            // 
+            // vendido
+            // 
+            this.vendido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.vendido.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.vendido.BackgroundImage = global::ABM2.Properties.Resources._21556851;
+            this.vendido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.vendido.Location = new System.Drawing.Point(546, 149);
+            this.vendido.Name = "vendido";
+            this.vendido.Size = new System.Drawing.Size(65, 50);
+            this.vendido.TabIndex = 39;
+            this.vendido.UseVisualStyleBackColor = false;
+            this.vendido.Click += new System.EventHandler(this.vendido_Click_1);
+            // 
+            // imprimir
+            // 
+            this.imprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.imprimir.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.imprimir.BackgroundImage = global::ABM2.Properties.Resources._71a0ea88_4580_448f_9646_2da9cfc870c41;
+            this.imprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imprimir.Location = new System.Drawing.Point(461, 149);
+            this.imprimir.Name = "imprimir";
+            this.imprimir.Size = new System.Drawing.Size(70, 53);
+            this.imprimir.TabIndex = 38;
+            this.imprimir.UseVisualStyleBackColor = false;
+            this.imprimir.Click += new System.EventHandler(this.imprimir_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(748, 49);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(214, 27);
+            this.label5.TabIndex = 67;
+            this.label5.Text = "Nombre y Apellido :";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(749, 131);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(52, 27);
+            this.label8.TabIndex = 66;
+            this.label8.Text = "DNI";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(749, 92);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(114, 27);
+            this.label9.TabIndex = 65;
+            this.label9.Text = "Teléfono :";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(749, 167);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(118, 27);
+            this.label10.TabIndex = 64;
+            this.label10.Text = "Dirección :";
             // 
             // frm8_CuentaCorriente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1436, 848);
+            this.ClientSize = new System.Drawing.Size(1425, 848);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.totalnuventxt);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.saldotxt);
-            this.Controls.Add(this.idcuentatxt);
-            this.Controls.Add(this.idcctxt2);
-            this.Controls.Add(this.idartxt);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.fechapedido);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.apenomtxt);
+            this.Controls.Add(this.idcuentatxt);
             this.Controls.Add(this.dnitxt);
+            this.Controls.Add(this.idcctxt2);
             this.Controls.Add(this.teltxt);
+            this.Controls.Add(this.idartxt);
             this.Controls.Add(this.directxt);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label7);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.coincidtxt);
@@ -460,10 +512,10 @@ namespace ABM2
             this.Controls.Add(this.cancelar);
             this.Controls.Add(this.vendido);
             this.Controls.Add(this.imprimir);
-            this.Controls.Add(this.dgvcc);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bustxt);
             this.Controls.Add(this.dgvartcc);
+            this.Controls.Add(this.dgvcc);
             this.Name = "frm8_CuentaCorriente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CUENTAS";
@@ -499,13 +551,15 @@ namespace ABM2
         private System.Windows.Forms.Label apenomtxt;
         private System.Windows.Forms.Label dnitxt;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker fechapedido;
         private System.Windows.Forms.Button button2;
         public System.Windows.Forms.TextBox idartxt;
         public System.Windows.Forms.TextBox idcuentatxt;
         private System.Windows.Forms.TextBox saldotxt;
         private System.Windows.Forms.TextBox totalnuventxt;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ToolTip entretatip;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }

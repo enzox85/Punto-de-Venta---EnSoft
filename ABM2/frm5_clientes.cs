@@ -33,7 +33,9 @@ namespace ABM2
             MySqlDataAdapter clientes = new MySqlDataAdapter("select idcliente, DNI, ape_nom, telefono, domicilio from clientes", con);
             clientes.Fill(tab);
             dataGridView2.DataSource = tab.DefaultView;
+            dataGridView2.ClearSelection();
             totxt.Text = "Total: " + tab.DefaultView.Count.ToString();
+
             con.Close();
 
             //Ajusta el datagrid a la ventana--------------------
@@ -113,7 +115,7 @@ namespace ABM2
             ir_a.Show();
            // this.Hide();
         }
-
+        
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             idCtxt.Text = dataGridView2.CurrentRow.Cells[0].Value.ToString();
@@ -136,15 +138,20 @@ namespace ABM2
             {
                 e.SuppressKeyPress = true;
 
+                if (!ClienteSeleccionado())
+                    return;
+
                 frm8_CuentaCorriente ccc = new frm8_CuentaCorriente();
                 ccc.idcctxt2.Text = dataGridView2.CurrentRow.Cells[0].Value.ToString();
-                ccc.Show();;
-               this.Close();
+                ccc.Show();
+                 this.Close();
             }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            if (!ClienteSeleccionado())
+                return;
             frm8_CuentaCorriente ccc = new frm8_CuentaCorriente();
             ccc.idcctxt2.Text = dataGridView2.CurrentRow.Cells[0].Value.ToString();
             ccc.Show();
@@ -154,5 +161,32 @@ namespace ABM2
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //CONSUMIDOR FINAL
+            if (!ClienteSeleccionado())
+                return;            
+            frm8_vender.Instancia.idc3txt.Text = dataGridView2.CurrentRow.Cells[0].Value.ToString();
+            this.Close();
+        }
+        private bool ClienteSeleccionado()
+        {
+            if (dataGridView2.CurrentRow == null || dataGridView2.CurrentRow.Index == -1)
+            {
+                MessageBox.Show("Debe seleccionar un cliente de la lista.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            // Verifica que realmente se seleccionó una fila
+            if (dataGridView2.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Debe seleccionar un cliente de la lista.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            return true;
+        }
     }
+    
 }

@@ -115,19 +115,42 @@ namespace ABM2
         private void button2_Click(object sender, EventArgs e)
         {//FUNCION: ELIMINAR ARTICULO-----
 
+            /* string fila = Convert.ToString(dataGridView1.CurrentRow.Cells[0].Value);
+             if (MessageBox.Show("¿Borrar a: " + dataGridView1.CurrentRow.Cells[2].Value + " de los articulos?", caption: "Enzo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+             {
+                 con.Open();
+                 MySqlCommand eliminar = new MySqlCommand("DELETE FROM productos WHERE idproducto LIKE '" + fila + "'", con);
+                 eliminar.ExecuteNonQuery();
+                 tab.Clear();
+                 MySqlDataAdapter articulos = new MySqlDataAdapter("SELECT idproducto, codigo, articulos, stock, stockmin, precio_costo, iva, precio_venta FROM productos", con);
+                 articulos.Fill(tab);
+                 con.Close();
+             }*/
             string fila = Convert.ToString(dataGridView1.CurrentRow.Cells[0].Value);
-            if (MessageBox.Show("¿Borrar a: " + dataGridView1.CurrentRow.Cells[2].Value + " de los articulos?", caption: "Enzo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+
+            if (MessageBox.Show("¿Borrar a: " + dataGridView1.CurrentRow.Cells[2].Value + " de los articulos?",
+                                "Enzo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
             {
                 con.Open();
-                MySqlCommand eliminar = new MySqlCommand("DELETE FROM productos WHERE idproducto LIKE '" + fila + "'", con);
-                eliminar.ExecuteNonQuery();
+
+                // Eliminar filas dependientes de la tabla `cuentcor`
+                MySqlCommand eliminarDependencias = new MySqlCommand("DELETE FROM cuentcor WHERE idproductofk = @id", con);
+                eliminarDependencias.Parameters.AddWithValue("@id", fila);
+                eliminarDependencias.ExecuteNonQuery();
+
+                // Eliminar el producto
+                MySqlCommand eliminarProducto = new MySqlCommand("DELETE FROM productos WHERE idproducto = @id", con);
+                eliminarProducto.Parameters.AddWithValue("@id", fila);
+                eliminarProducto.ExecuteNonQuery();
+
+                // Actualizar DataGridView
                 tab.Clear();
                 MySqlDataAdapter articulos = new MySqlDataAdapter("SELECT idproducto, codigo, articulos, stock, stockmin, precio_costo, iva, precio_venta FROM productos", con);
                 articulos.Fill(tab);
+
                 con.Close();
+
             }
-
-
         }
 
         private void button1_Click(object sender, EventArgs e)

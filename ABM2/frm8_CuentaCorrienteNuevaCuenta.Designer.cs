@@ -60,6 +60,7 @@ namespace ABM2
             this.Controls.Add(this.textBox1);
             this.Name = "frm8_CuentaCorrienteNuevaCuenta";
             this.Text = "frm8_CuentaCorrienteNuevaCuenta";
+            this.Load += new System.EventHandler(this.frm8_CuentaCorrienteNuevaCuenta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

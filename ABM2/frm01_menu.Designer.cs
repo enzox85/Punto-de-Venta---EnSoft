@@ -29,282 +29,239 @@ namespace ABM2
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
             this.caja2but = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.CuentaMenu = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button9config = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label1.Font = new System.Drawing.Font("MV Boli", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(54, 195);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 39);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "CAJA";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label2.Font = new System.Drawing.Font("MV Boli", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(259, 195);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(197, 39);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "PRODUCTOS";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label3.Font = new System.Drawing.Font("MV Boli", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(488, 195);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(160, 39);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "CLIENTES";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label4.Font = new System.Drawing.Font("MV Boli", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(691, 195);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(198, 39);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "EMPLEADOS";
             // 
             // caja2but
             // 
-            this.caja2but.Location = new System.Drawing.Point(21, 250);
+            this.caja2but.BackColor = System.Drawing.SystemColors.Control;
+            this.caja2but.Location = new System.Drawing.Point(1415, 427);
             this.caja2but.Name = "caja2but";
             this.caja2but.Size = new System.Drawing.Size(75, 23);
             this.caja2but.TabIndex = 11;
             this.caja2but.Text = "CAJA 2";
-            this.caja2but.UseVisualStyleBackColor = true;
+            this.caja2but.UseVisualStyleBackColor = false;
+            this.caja2but.Visible = false;
             this.caja2but.Click += new System.EventHandler(this.caja2but_Click);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(129, 250);
+            this.button6.BackColor = System.Drawing.SystemColors.Control;
+            this.button6.Location = new System.Drawing.Point(1415, 456);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 12;
             this.button6.Text = "CAJA 3";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Visible = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // label5
+            // panel1
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.AutoSize = true;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label5.Font = new System.Drawing.Font("MV Boli", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(920, 195);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(233, 39);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "PROVEEDORES";
+            this.panel1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.CuentaMenu);
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button9config);
+            this.panel1.Controls.Add(this.button8);
+            this.panel1.Controls.Add(this.button7);
+            this.panel1.Controls.Add(this.button9);
+            this.panel1.Location = new System.Drawing.Point(1, 40);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(219, 1014);
+            this.panel1.TabIndex = 17;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
-            // label6
+            // label10
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label6.AutoSize = true;
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label6.Font = new System.Drawing.Font("MV Boli", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(0, 485);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(261, 39);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Cuenta Corriente";
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label10.AutoSize = true;
+            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label10.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(68, 1071);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(190, 28);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "CONFIGURACIÓN";
             // 
             // CuentaMenu
             // 
-            this.CuentaMenu.Location = new System.Drawing.Point(97, 353);
+            this.CuentaMenu.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CuentaMenu.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.CuentaMenu.BackgroundImage = global::ABM2.Properties.Resources.Captura_de_pantalla_2024_11_11_173328;
+            this.CuentaMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CuentaMenu.Location = new System.Drawing.Point(41, 133);
             this.CuentaMenu.Name = "CuentaMenu";
-            this.CuentaMenu.Size = new System.Drawing.Size(107, 82);
+            this.CuentaMenu.Size = new System.Drawing.Size(139, 112);
             this.CuentaMenu.TabIndex = 16;
-            this.CuentaMenu.Text = "Cuenta Corriente\r\nMENÚ\r\n";
-            this.CuentaMenu.UseVisualStyleBackColor = true;
+            this.toolTip1.SetToolTip(this.CuentaMenu, "CUENTA CORRIENTE");
+            this.CuentaMenu.UseVisualStyleBackColor = false;
             this.CuentaMenu.Click += new System.EventHandler(this.CuentaMenu_Click);
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button8.BackgroundImage = global::ABM2.Properties.Resources.pngwing_com;
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button8.Location = new System.Drawing.Point(758, 307);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(204, 175);
-            this.button8.TabIndex = 15;
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.SystemColors.Control;
-            this.button7.BackgroundImage = global::ABM2.Properties.Resources._12354461;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button7.Location = new System.Drawing.Point(377, 307);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(204, 175);
-            this.button7.TabIndex = 13;
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button5
             // 
-            this.button5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button5.AutoSize = true;
-            this.button5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.BackgroundImage = global::ABM2.Properties.Resources.Captura_de_pantalla_2024_09_01_040521;
+            this.button5.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.button5.BackgroundImage = global::ABM2.Properties.Resources.business_team_employees_user_icon_free_vector2;
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Location = new System.Drawing.Point(703, 34);
+            this.button5.Location = new System.Drawing.Point(41, 724);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(176, 151);
+            this.button5.Size = new System.Drawing.Size(141, 120);
             this.button5.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.button5, "EMPLEADOS");
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button4.AutoSize = true;
-            this.button4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button4.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.button4.BackgroundImage = global::ABM2.Properties.Resources.caja;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Location = new System.Drawing.Point(21, 34);
+            this.button4.Location = new System.Drawing.Point(41, 5);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(204, 151);
+            this.button4.Size = new System.Drawing.Size(139, 124);
             this.button4.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.button4, "VENTAS");
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button3.BackColor = System.Drawing.Color.MediumAquamarine;
             this.button3.BackgroundImage = global::ABM2.Properties.Resources._2103848;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Location = new System.Drawing.Point(934, 34);
+            this.button3.Location = new System.Drawing.Point(41, 602);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(189, 151);
+            this.button3.Size = new System.Drawing.Size(139, 116);
             this.button3.TabIndex = 5;
-            this.button3.UseVisualStyleBackColor = true;
+            this.toolTip1.SetToolTip(this.button3, "PROVEEDORES");
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // button9config
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button2.AutoSize = true;
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.BackgroundImage = global::ABM2.Properties.Resources._8254206;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(479, 34);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(186, 151);
-            this.button2.TabIndex = 3;
-            this.button2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button9config.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button9config.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.button9config.BackgroundImage = global::ABM2.Properties.Resources.b053e995_7f00_4e49_9f78_50918c8d01ff;
+            this.button9config.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button9config.Location = new System.Drawing.Point(43, 850);
+            this.button9config.Name = "button9config";
+            this.button9config.Size = new System.Drawing.Size(139, 124);
+            this.button9config.TabIndex = 16;
+            this.toolTip1.SetToolTip(this.button9config, "CONFIGURACIÓN");
+            this.button9config.UseVisualStyleBackColor = false;
+            this.button9config.Click += new System.EventHandler(this.button9config_Click);
             // 
-            // button1
+            // button8
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.BackgroundImage = global::ABM2.Properties.Resources.Update__Label_Reading_and_FODMAPs2;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(256, 34);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 151);
-            this.button1.TabIndex = 2;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button8.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.button8.BackgroundImage = global::ABM2.Properties.Resources._27516151;
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button8.Location = new System.Drawing.Point(43, 247);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(137, 109);
+            this.button8.TabIndex = 15;
+            this.button8.Text = "CAJA";
+            this.toolTip1.SetToolTip(this.button8, "CAJA");
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button7
+            // 
+            this.button7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button7.AutoSize = true;
+            this.button7.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.button7.BackgroundImage = global::ABM2.Properties.Resources._8254206;
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(41, 481);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(138, 118);
+            this.button7.TabIndex = 3;
+            this.button7.Text = "CLIENTES";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.toolTip1.SetToolTip(this.button7, "CLIENTES");
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button9
+            // 
+            this.button9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button9.AutoSize = true;
+            this.button9.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.button9.BackgroundImage = global::ABM2.Properties.Resources.Update__Label_Reading_and_FODMAPs2;
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button9.Location = new System.Drawing.Point(41, 360);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(139, 120);
+            this.button9.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.button9, "PRODUCTOS");
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
             // frm01_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(1238, 857);
-            this.Controls.Add(this.CuentaMenu);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.button7);
+            this.BackColor = System.Drawing.Color.OliveDrab;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1555, 1055);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.caja2but);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frm01_menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MENÚ";
             this.Load += new System.EventHandler(this.frm01_menu_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.frm01_menu_Paint_1);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button caja2but;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button CuentaMenu;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button9config;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

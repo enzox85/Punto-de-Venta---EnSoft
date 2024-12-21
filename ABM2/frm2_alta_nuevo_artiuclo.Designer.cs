@@ -42,7 +42,6 @@ namespace ABM2
             this.codigotxt = new System.Windows.Forms.TextBox();
             this.stocktxt = new System.Windows.Forms.TextBox();
             this.precioventatxt = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.guardar = new System.Windows.Forms.Button();
@@ -151,7 +150,7 @@ namespace ABM2
             this.stockmintxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.stockmintxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stockmintxt.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.stockmintxt.Location = new System.Drawing.Point(385, 154);
+            this.stockmintxt.Location = new System.Drawing.Point(385, 159);
             this.stockmintxt.Name = "stockmintxt";
             this.stockmintxt.Size = new System.Drawing.Size(103, 34);
             this.stockmintxt.TabIndex = 4;
@@ -192,21 +191,11 @@ namespace ABM2
             this.precioventatxt.TabIndex = 38;
             this.precioventatxt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(252, 230);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(38, 20);
-            this.label7.TabIndex = 39;
-            this.label7.Text = "IVA";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(395, 231);
+            this.label8.Location = new System.Drawing.Point(267, 231);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(25, 20);
             this.label8.TabIndex = 40;
@@ -217,7 +206,7 @@ namespace ABM2
             this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button2.BackgroundImage = global::ABM2.Properties.Resources.Go_back_36760;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(34, 335);
+            this.button2.Location = new System.Drawing.Point(33, 353);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(93, 79);
             this.button2.TabIndex = 7;
@@ -228,7 +217,7 @@ namespace ABM2
             // 
             this.guardar.BackgroundImage = global::ABM2.Properties.Resources._4305589;
             this.guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guardar.Location = new System.Drawing.Point(534, 335);
+            this.guardar.Location = new System.Drawing.Point(516, 350);
             this.guardar.Name = "guardar";
             this.guardar.Size = new System.Drawing.Size(91, 82);
             this.guardar.TabIndex = 8;
@@ -239,7 +228,7 @@ namespace ABM2
             // 
             this.pictureBox1.BackgroundImage = global::ABM2.Properties.Resources.Iconos_gratuitos_de_Carretilla_diseñados_por_Smashicons1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(467, 159);
+            this.pictureBox1.Location = new System.Drawing.Point(431, 159);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(176, 146);
             this.pictureBox1.TabIndex = 37;
@@ -250,9 +239,8 @@ namespace ABM2
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(677, 447);
+            this.ClientSize = new System.Drawing.Size(736, 447);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.precioventatxt);
             this.Controls.Add(this.stocktxt);
             this.Controls.Add(this.button2);
@@ -296,7 +284,6 @@ namespace ABM2
         private System.Windows.Forms.TextBox stocktxt;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label precioventatxt;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
     }
 }

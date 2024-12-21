@@ -41,9 +41,11 @@ namespace ABM2
             dgvcc.DataSource = cuentab.DefaultView;
             dgvcc.RowHeadersVisible = false;
             dgvcc.Columns["idcliente"].Visible = false;
+            dgvcc.ClearSelection();
 
             con.Close();
-           
+            ActualizarTotales();
+
         }
 
         private void nuevacctxt_Click(object sender, EventArgs e)
@@ -80,6 +82,22 @@ namespace ABM2
              
                 }
             }
+        }
+        private void ActualizarTotales()
+        {
+            // Cantidad total de clientes
+            int totalClientes = cuentab.Rows.Count;
+            label1.Text = totalClientes.ToString();
+
+            // Monto total de deudas
+            decimal totalDeudas = cuentab.AsEnumerable()
+                                         .Sum(row => Convert.ToDecimal(row["DeudaTotal"]));
+            label2.Text = totalDeudas.ToString("C"); // Formato moneda
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

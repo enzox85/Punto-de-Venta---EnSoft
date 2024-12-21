@@ -119,6 +119,7 @@ namespace ABM2
             this.idtxt.Size = new System.Drawing.Size(100, 34);
             this.idtxt.TabIndex = 27;
             this.idtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.idtxt.Visible = false;
             // 
             // agregart
             // 

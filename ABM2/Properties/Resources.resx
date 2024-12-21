@@ -118,142 +118,235 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="43055891" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\43055891.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="png-transparent-bank-account-wire-transfer-cheque-money-transfer-bank-leaf-text-logo-thumbnail" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\png-transparent-bank-account-wire-transfer-cheque-money-transfer-bank-leaf-text-logo-thumbnail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Update_ Label Reading and FODMAPs2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Update_ Label Reading and FODMAPs1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Iconos gratuitos de Carretilla diseñados por Smashicons" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Iconos gratuitos de Carretilla diseñados por Smashicons.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Lock-password-icon-Graphics-18249988-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Lock-password-icon-Graphics-18249988-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="8254206" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\8254206.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AgregarPROOVEDOR" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AgregarPROOVEDOR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="nuevoempleado" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nuevoempleado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Iconos gratuitos de Botón Agregar diseñados por Uniconlabs" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Iconos gratuitos de Botón Agregar diseñados por Uniconlabs.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Captura de pantalla 2024-08-29 2104311" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Captura de pantalla 2024-08-29 2104311.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Go-back_36760" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Go-back_36760.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1235446" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1235446.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1738697" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1738697.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Iconos gratuitos de Carretilla diseñados por Smashicons1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Iconos gratuitos de Carretilla diseñados por Smashicons.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-proveedor-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-proveedor-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="modificar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\modificar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2103848" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2103848.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="png-transparent-computer-software-computer-icons-management-others-computer-area-management" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\png-transparent-computer-software-computer-icons-management-others-computer-area-management.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Social Media free icons designed by Freepik" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Social Media free icons designed by Freepik.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="(476)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\(476).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Lock-password-icon-Graphics-18249988-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lock-password-icon-Graphics-18249988-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Captura de pantalla 2024-09-01 040521" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Captura de pantalla 2024-09-01 040521.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="images1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="4305589" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4305589.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="1214926" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1214926.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Captura de pantalla 2024-08-29 201503" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Captura de pantalla 2024-08-29 201503.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="business-team-employees-user-icon-free-vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\business-team-employees-user-icon-free-vector.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="caja" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\caja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="4305535" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4305535.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="stock_4379653" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stock_4379653.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Social Media free icons designed by Freepik1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Social Media free icons designed by Freepik.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Update_ Label Reading and FODMAPs" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Update_ Label Reading and FODMAPs.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2083080" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2083080.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Social Media free icons designed by Freepik2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Social Media free icons designed by Freepik1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="5408490" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\5408490.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="12354461" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\12354461.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="12149261" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\12149261.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="modificar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\modificar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Edit_User-80_icon-icons.com_57329" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Edit_User-80_icon-icons.com_57329.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Update_ Label Reading and FODMAPs1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Update_ Label Reading and FODMAPs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="png-transparent-save-icon-button-symbol-thumbnail" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\png-transparent-save-icon-button-symbol-thumbnail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Iconos gratuitos de Botón Agregar diseñados por Uniconlabs1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Iconos gratuitos de Botón Agregar diseñados por Uniconlabs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="png-transparent-sales-computer-icons-business-purchasing-marketing-sales-company-text-people-thumbnail" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\png-transparent-sales-computer-icons-business-purchasing-marketing-sales-company-text-people-thumbnail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="png-transparent-bank-account-wire-transfer-cheque-money-transfersdsa-leaf-text-logo-thumbnail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\png-transparent-bank-account-wire-transfer-cheque-money-transfersdsa-leaf-text-logo-thumbnail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cash-register-icon-style-vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cash-register-icon-style-vector.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Captura de pantalla 2024-08-29 210431" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Captura de pantalla 2024-08-29 210431.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Modificar proovedor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Modificar proovedor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="12354461" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\12354461.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Social Media free icons designed by Freepik2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Social Media free icons designed by Freepik1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stock_4379653" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stock_4379653.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="png-transparent-bank-account-wire-transfer-cheque-money-transfer-bank-leaf-text-logo-thumbnail1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\png-transparent-bank-account-wire-transfer-cheque-money-transfer-bank-leaf-text-logo-thumbnail1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Social Media free icons designed by Freepik" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Social Media free icons designed by Freepik.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Update_ Label Reading and FODMAPs2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Update_ Label Reading and FODMAPs1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="71a0ea88-4580-448f-9646-2da9cfc870c41" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\71a0ea88-4580-448f-9646-2da9cfc870c41.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="b053e995-7f00-4e49-9f78-50918c8d01ff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\b053e995-7f00-4e49-9f78-50918c8d01ff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1738697" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1738697.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Iconos gratuitos de Botón Agregar diseñados por Uniconlabs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Iconos gratuitos de Botón Agregar diseñados por Uniconlabs.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="155951171_249236086853286_2129671973490496428_n2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\155951171_249236086853286_2129671973490496428_n2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="da968169-1183-4898-a25c-a90ef27e895e" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\da968169-1183-4898-a25c-a90ef27e895e.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="caja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\caja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="155951171_249236086853286_2129671973490496428_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\155951171_249236086853286_2129671973490496428_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nuevoempleado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nuevoempleado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="21556851" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\21556851.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Captura de pantalla 2024-08-29 210431" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Captura de pantalla 2024-08-29 210431.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AgregarPROOVEDOR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AgregarPROOVEDOR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="png-transparent-sales-computer-icons-business-purchasing-marketing-sales-company-text-people-thumbnail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\png-transparent-sales-computer-icons-business-purchasing-marketing-sales-company-text-people-thumbnail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Captura de pantalla 2024-09-01 040521" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Captura de pantalla 2024-09-01 040521.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Social Media free icons designed by Freepik1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Social Media free icons designed by Freepik.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2155685" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2155685.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fe071bba-06a9-4faf-bd9f-cb5977c768f3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fe071bba-06a9-4faf-bd9f-cb5977c768f3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4305535" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4305535.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="12149261" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\12149261.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Update_ Label Reading and FODMAPs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Update_ Label Reading and FODMAPs.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="modificar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\modificar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Edit_User-80_icon-icons.com_57329" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Edit_User-80_icon-icons.com_57329.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1235446" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1235446.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2751615" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2751615.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-proveedor-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-proveedor-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="modificar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\modificar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lock-password-icon-Graphics-18249988-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lock-password-icon-Graphics-18249988-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Captura de pantalla 2024-11-11 1643011" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Captura de pantalla 2024-11-11 1643011.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Iconos gratuitos de Botón Agregar diseñados por Uniconlabs1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Iconos gratuitos de Botón Agregar diseñados por Uniconlabs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="43055893" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\43055893.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="business-team-employees-user-icon-free-vector1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\business-team-employees-user-icon-free-vector1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="png-clipart-heart-symbol-circle-font-close-red-and-white-cancel-icon-heart-window-thumbnail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\png-clipart-heart-symbol-circle-font-close-red-and-white-cancel-icon-heart-window-thumbnail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2083080" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2083080.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="company-staff-rgb-color-icon-for-dark-theme-vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\company-staff-rgb-color-icon-for-dark-theme-vector.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="png-transparent-bank-account-wire-transfer-cheque-money-transfer-bank-leaf-text-logo-thumbnail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\png-transparent-bank-account-wire-transfer-cheque-money-transfer-bank-leaf-text-logo-thumbnail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Update_ Label Reading and FODMAPs1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Update_ Label Reading and FODMAPs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2103848" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2103848.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Captura de pantalla 2024-11-11 173328" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Captura de pantalla 2024-11-11 173328.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="business-team-employees-user-icon-free-vector2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\business-team-employees-user-icon-free-vector.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="43055892" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\43055892.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="43055891" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\43055891.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="d26373e5-7c98-431c-a811-68de056d3ea0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\d26373e5-7c98-431c-a811-68de056d3ea0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="71a0ea88-4580-448f-9646-2da9cfc870c4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\71a0ea88-4580-448f-9646-2da9cfc870c4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo_1 Multrirubro_MM_colibri" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo_1 Multrirubro_MM_colibri.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Captura de pantalla 2024-08-29 2104311" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Captura de pantalla 2024-08-29 2104311.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="png-transparent-bank-account-wire-transfer-cheque-money-transfer-bank-leaf-text-logo-thumbnail2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\png-transparent-bank-account-wire-transfer-cheque-money-transfer-bank-leaf-text-logo-thumbnail2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="png-clipart-android-lollipop-icons-settings-android-setting-icon-thumbnail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\png-clipart-android-lollipop-icons-settings-android-setting-icon-thumbnail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="png-transparent-save-icon-button-symbol-thumbnail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\png-transparent-save-icon-button-symbol-thumbnail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4305589" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4305589.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Captura de pantalla 2024-08-29 201503" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Captura de pantalla 2024-08-29 201503.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="27516151" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\27516151.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="155951171_249236086853286_2129671973490496428_n1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\155951171_249236086853286_2129671973490496428_n1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Iconos gratuitos de Carretilla diseñados por Smashicons" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Iconos gratuitos de Carretilla diseñados por Smashicons.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="5408490" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5408490.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="png-transparent-computer-software-computer-icons-management-others-computer-area-management" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\png-transparent-computer-software-computer-icons-management-others-computer-area-management.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pngwing.com" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngwing.com.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Iconos gratuitos de Carretilla diseñados por Smashicons1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Iconos gratuitos de Carretilla diseñados por Smashicons.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VOLVER" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VOLVER.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Go-back_36760" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Go-back_36760.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Captura de pantalla 2024-11-11 164301" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Captura de pantalla 2024-11-11 164301.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="png-clipart-heart-symbol-circle-font-close-red-and-white-cancel-icon-heart-window-thumbnail1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\png-clipart-heart-symbol-circle-font-close-red-and-white-cancel-icon-heart-window-thumbnail1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
